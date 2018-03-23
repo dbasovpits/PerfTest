@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Welcome to the Staff Training Room</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}"/>
+    <meta charset="utf-8" />
+</head>
+<body bgcolor="#e0e7f1">
+    <div class="left-area">
+        <form method="post" action="/cgi-bin/login.pl" target="body">
+            <input type="hidden" name="userSession" value="122940.667881733zDcDHzApzAtVzzzHDHQtcpfzDzcf"/>
+                    <small>&nbsp;Username</small>
+                    <input type="text" name="username" value="" size="14" maxlength="14"/>
+                    <small>&nbsp;Password</small>
+                    <input type="password" name="password" value="" size="14" maxlength="14"/>
+                <p><input type="image" name="login" value="Login" alt="Login" border="1"
+                          src="/imgs/mer_login.gif"/></p>
+            <input type="hidden" name="JSFormSubmit" value="off"/>
+        </form>
+    </div>
+
+    <div class="rigth-area">
+            <blockquote>
+                <H1><b>Web Tours</b></H1>
+                Welcome to the Web Tours site.
+                <br/>
+                To make reservations,please enter your account information to the left.
+                <br/>
+                If you haven't registered yet, <A href="/cgi-bin/login.pl?username=&amp;password=&amp;getInfo=true" ><B>sign up now</B></A> to get access to all our resources.
+                <br/>
+                To configure the server options, use <A href="/cgi-bin/admin.pl" target="body" ><b>administration</b></A> link.
+             </blockquote>
+    </div>
+</body>
+</html>
