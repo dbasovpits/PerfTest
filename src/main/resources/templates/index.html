@@ -1,35 +1,88 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Welcome to the Staff Training Room</title>
-    <link rel="stylesheet" th:href="@{/css/index.css}"/>
-    <meta charset="utf-8" />
-</head>
-<body bgcolor="#e0e7f1">
-    <div class="left-area">
-        <form method="post" action="/cgi-bin/login.pl" target="body">
-            <input type="hidden" name="userSession" value="122940.667881733zDcDHzApzAtVzzzHDHQtcpfzDzcf"/>
-                    <small>&nbsp;Username</small>
-                    <input type="text" name="username" value="" size="14" maxlength="14"/>
-                    <small>&nbsp;Password</small>
-                    <input type="password" name="password" value="" size="14" maxlength="14"/>
-                <p><input type="image" name="login" value="Login" alt="Login" border="1"
-                          src="/imgs/mer_login.gif"/></p>
-            <input type="hidden" name="JSFormSubmit" value="off"/>
-        </form>
-    </div>
+<title>Welcome to the Staff Training Room</title>
+<meta charset="utf-8" />
+<style>
+    html {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: #e0e7f1;
+    }
 
-    <div class="rigth-area">
-            <blockquote>
-                <H1><b>Web Tours</b></H1>
-                Welcome to the Web Tours site.
-                <br/>
-                To make reservations,please enter your account information to the left.
-                <br/>
-                If you haven't registered yet, <A href="/cgi-bin/login.pl?username=&amp;password=&amp;getInfo=true" ><B>sign up now</B></A> to get access to all our resources.
-                <br/>
-                To configure the server options, use <A href="/cgi-bin/admin.pl" target="body" ><b>administration</b></A> link.
-             </blockquote>
-    </div>
+    *, *::before, *::after {
+        box-sizing: inherit;
+    }
+
+    header {
+        background-color: #003366;
+        height: 66px;
+    }
+
+    nav {
+        background-color: #e0e7f1;
+        border-right: solid black 1px;
+        width: 9%;
+
+    }
+
+    main {
+        background-color: #e0e7f1;
+        width: 91%;
+
+    }
+
+    footer {
+        background-color: #003366;
+        height: 60px;
+    }
+
+    h1,
+    h2,
+    ul,
+    p {
+        margin: 0;
+    }
+
+    li {
+        list-style-type: none; /* Убираем маркеры */
+    }
+    ul{
+        margin-top: 50px;
+        padding-left: 40px;
+    }
+    #container{
+        display: flex;
+        height: 800px;
+    }
+
+</style>
+</head>
+<body>
+<header>
+    <div th:include="header :: header"></div>
+</header>
+<div id="container">
+    <nav>
+        <div style="margin-top: 30px" th:include="old_login :: old_login"></div>
+        <!--<div style="margin-top: 20px; margin-left: 25px" th:include="nav :: navbar"></div>-->
+    </nav>
+    <main>
+        <div style="margin-top: 30px" th:include="welcome :: welcome"></div>
+        <!--<div style="margin-top: 50px; margin-left: 15px" th:include="flights :: reservation"></div>-->
+        <!--<div style="margin-top: 150px; margin-left: 15px" th:include="home :: home"></div>-->
+        <!--<div style="margin-top: 150px; margin-left: 15px" th:include="reservation4 :: reservation4"></div>-->
+        <!--<div style="margin-top: 50px; margin-left: 15px" th:include="reservation3 :: reservation3"></div>-->
+        <!--<div style="margin-top: 50px; margin-left: 15px" th:include="reservation2 :: reservation2"></div>-->
+        <!--<div style="margin-top: 50px; margin-left: 15px" th:include="itinerary :: itinerary"></div>-->
+        <!--<div style="margin-top: 50px; margin-left: 15px" th:include="sign_up :: sign_up"></div>-->
+        <!--<div style="margin-top: 50px; margin-left: 15px" th:include="sign_up_ok :: sign_up_ok"></div>-->
+    </main>
+
+</div>
 </body>
 </html>

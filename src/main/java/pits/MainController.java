@@ -11,4 +11,15 @@ public class MainController {
     public String welcome(Model model) {
         return "index";
     }
+
+    @RequestMapping("/home")
+    public String home(Model model) {
+        return "home";
+
+    }
+
+    @RequestMapping("/login")
+    public String login(Model model) {
+        return "login";
+    }
 }
