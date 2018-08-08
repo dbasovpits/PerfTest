@@ -18,8 +18,10 @@ public class MainController {
 
     }
 
-    @RequestMapping("/old_login")
-    public String login(Model model) {
-        return "old_login";
+    @RequestMapping("/auth")
+    public String auth(Model model) {
+        return "auth";
+
     }
+
 }

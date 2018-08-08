@@ -1,16 +1,15 @@
-<HTML xmlns="http://www.w3.org/1999/xhtml">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <HEAD>
 
 </HEAD>
 <div th:fragment="header">
 <BODY bgcolor="#003366" leftmargin="0" marginheight="0" marginwidth="0" topmargin="0">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
         <td align="left" valign="middle" width="50%">
             <a href="/">
-                <img src="imgs/hp_logo.png" alt="" height="45" width="69" align="absmiddle" border="0"/>
-                <img src="imgs/webtours.png" alt="" height="45" width="130" align="absmiddle" border="0"/>
+                <img th:src="@{/img/hp_logo.png}" alt="" height="45" width="69" align="absmiddle" border="0"/>
+                <img th:src="@{img/webtours.png}" alt="" height="45" width="130" align="absmiddle" border="0"/>
             </a>
         </td>
         <td align="right"></td>
