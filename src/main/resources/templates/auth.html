@@ -2,65 +2,7 @@
 <head>
 <title>Welcome to the Staff Training Room</title>
 <meta charset="utf-8" />
-<style>
-    html {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-    body{
-        margin: 0;
-        padding: 0;
-        background-color: #e0e7f1;
-    }
-
-    *, *::before, *::after {
-        box-sizing: inherit;
-    }
-
-    header {
-        background-color: #003366;
-        height: 66px;
-    }
-
-    nav {
-        background-color: #e0e7f1;
-        border-right: solid black 1px;
-        width: 9%;
-
-    }
-
-    main {
-        background-color: #e0e7f1;
-        width: 91%;
-
-    }
-
-    footer {
-        background-color: #003366;
-        height: 60px;
-    }
-
-    h1,
-    h2,
-    ul,
-    p {
-        margin: 0;
-    }
-
-    li {
-        list-style-type: none; /* Убираем маркеры */
-    }
-    ul{
-        margin-top: 50px;
-        padding-left: 40px;
-    }
-    #container{
-        display: flex;
-        height: 800px;
-    }
-
-</style>
+    <link rel="stylesheet" th:href="@{css/auth.css}">
 </head>
 <body>
 <header>
@@ -69,24 +11,15 @@
 <div id="container">
     <nav>
         <div th:if="${param.error}">
-            Invalid username and password.
+            <h3>Invalid username and password.</h3>
         </div>
         <div th:if="${param.logout}">
-            You have been logged out.
+            <h3>You have been logged out.</h3>
         </div>
         <div style="margin-top: 30px" th:include="login :: login"></div>
-        <!--<div style="margin-top: 20px; margin-left: 25px" th:include="nav :: navbar"></div>-->
     </nav>
     <main>
         <div style="margin-top: 30px" th:include="welcome :: welcome"></div>
-        <!--<div style="margin-top: 50px; margin-left: 15px" th:include="flights :: reservation"></div>-->
-        <!--<div style="margin-top: 150px; margin-left: 15px" th:include="home :: home"></div>-->
-        <!--<div style="margin-top: 150px; margin-left: 15px" th:include="reservation4 :: reservation4"></div>-->
-        <!--<div style="margin-top: 50px; margin-left: 15px" th:include="reservation3 :: reservation3"></div>-->
-        <!--<div style="margin-top: 50px; margin-left: 15px" th:include="reservation2 :: reservation2"></div>-->
-        <!--<div style="margin-top: 50px; margin-left: 15px" th:include="itinerary :: itinerary"></div>-->
-        <!--<div style="margin-top: 50px; margin-left: 15px" th:include="sign_up :: sign_up"></div>-->
-        <!--<div style="margin-top: 50px; margin-left: 15px" th:include="sign_up_ok :: sign_up_ok"></div>-->
     </main>
 
 </div>

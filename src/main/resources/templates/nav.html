@@ -5,7 +5,7 @@
 </head>
 <body bgcolor="#E0E7F1">
 <div th:fragment="navbar">
-<style>
+<!--<style>
     blockquote {font-family: tahoma; font-size : 10pt}
     H1 {font-family: tahoma; font-size : 22pt; color: #993333}
     small {font-family: tahoma; font-size : 8pt}
@@ -13,13 +13,16 @@
     A {FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Tahoma; TEXT-DECORATION: none}
     A:hover{ FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #993333; FONT-FAMILY: Tahoma;TEXT-DECORATION: underline}
     TD {font-family: tahoma; font-size : 10pt; color: black}
-</style>
+</style>-->
 
 <BR><BR>
-    <br clear="both"/><A HREF=""><IMG BORDER="0" SRC="imgs/flights.gif" ALT="Search Flights Button"/></A>
-    <br clear="both"/><A HREF="" ><IMG BORDER="0" SRC="imgs/itinerary.gif" ALT="Itinerary Button"/></A>
-    <br clear="both"/><A HREF="" ><IMG BORDER="0" SRC="imgs/in_home.gif" ALT="Home Button"/></A>
-    <br clear><A HREF=""><IMG BORDER="0" SRC="imgs/signoff.gif" ALT="SignOff Button"/></A>
+    <br clear="both"/><A HREF=""><IMG BORDER="0" th:SRC="@{img/flights.gif}" ALT="Search Flights Button"/></A>
+    <br clear="both"/><A HREF="" ><IMG BORDER="0" th:SRC="@{img/itinerary.gif}" ALT="Itinerary Button"/></A>
+    <br clear="both"/><A HREF="" ><IMG BORDER="0" th:SRC="@{img/in_home.gif}" ALT="Home Button"/></A>
+    <form th:action="@{/logout}" method="post">
+        <input type="image" name="login" value="Sign Out" alt="Login" border="0"
+               th:src="@{img/signoff.gif}"/>
+    </form>
 </div>
 
 </body>

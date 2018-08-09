@@ -5,17 +5,11 @@
 <head>
     <title>Web Tours Navigation Bar</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" th:href="@{css/common.css}">
 </head>
 <body bgcolor="#E0E7F1">
 <div th:fragment="login">
-<style>
-    blockquote {font-family: tahoma; font-size : 10pt}
-    H1 {font-family: tahoma; font-size : 22pt; color: #993333}
-    H3 {font-family: tahoma; font-size : 10pt; color: black}
-    small {font-family: tahoma; font-size : 8pt}
-</style>
-<!--<form method="post" action="" target="body">
-    <input type="hidden" name="userSession" value="123294.101012556zDtVQtApDcAiDDDDDiAfVpztVQcf"/>
+<form method="post" th:action="@{/auth}">
     <table border="0"><tr><td>&nbsp;</td>
         <td>&nbsp;</td></tr>
         <tr><td>&nbsp;</td>
@@ -31,15 +25,15 @@
         <tr><td>&nbsp;</td>
             <td>&nbsp;</td></tr>
         <tr><td>&nbsp;</td>
-            <td><input type="image" name="login" value="Login" alt="Login" border="1"
-                       src="imgs/mer_login.gif"/></td></tr>
+            <td><input type="image" name="login" value="Sign In" alt="Login" border="0"
+                       th:src="@{img/mer_login.gif}"/></td></tr>
         <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-    </table><input type="hidden" name="JSFormSubmit" value="off"/>-->
-    <form th:action="@{/auth}" method="post">
-        <div><label> User Name : <input type="text" name="username"/> </label></div>
-        <div><label> Password: <input type="password" name="password"/> </label></div>
-        <div><input type="submit" value="Sign In"/></div>
-    </form>
+    </table><input type="hidden" name="JSFormSubmit" value="off"/>
+<!--    <form th:action="@{/auth}" method="post">
+        <div><label><h3> Username : <input type="text" name="username"/></h3> </label></div>
+        <div><label><h3> Password: <input type="password" name="password"/></h3> </label></div>
+        <div><input type="image" value="Sign In" th:src="@{img/mer_login.gif}" alt="Login" border="0"/></div>
+    </form>-->
 
 </form>
 </div>
