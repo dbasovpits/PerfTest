@@ -18,10 +18,4 @@ public class MainController {
 
     }
 
-    @RequestMapping("/flights")
-    public String flights(Model model) {
-        return "flights";
-
-    }
-
 }
