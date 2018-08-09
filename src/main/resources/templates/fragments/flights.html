@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<HTML xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" th:fragment="reservation">
+<HEAD>
+
+</HEAD>
+<BODY bgcolor="#e0e7f1">
+<div>
+        <h1><span style="color:#003366">&nbsp;&nbsp;<b>Find Flight</b></span></h1><br>
+
+        <form method="post" action=""  onsubmit="" name="DestForm">
+
+            <input name="advanceDiscount" value="0" class="__fx-devtools-hide-shortcut__" type="hidden">
+
+            <table cellspacing="5" border="0">
+                <tbody>
+                <tr>
+                    <td align="left">Departure City :</td>
+                    <td>
+                        <select name="depart">
+                        <option selected="selected" value="Denver">Denver</option>
+                        <option value="Frankfurt">Frankfurt</option>
+                        <option value="London">London</option>
+                        <option value="Los Angeles">Los Angeles</option>
+                        <option value="Paris">Paris</option>
+                        <option value="Portland">Portland</option>
+                        <option value="San Francisco">San Francisco</option>
+                        <option value="Seattle">Seattle</option>
+                        <option value="Sydney">Sydney</option>
+                        <option value="Zurich">Zurich</option>
+                        </select>
+                    </td>
+                    <td align="left">Departure Date :</td>
+                    <td>
+                        <input name="departDate" value="03/27/2018" size="10" maxlength="10" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">Arrival City :</td>
+                    <td>
+                        <select name="arrive">
+                        <option selected="selected" value="Denver">Denver</option>
+                        <option value="Frankfurt">Frankfurt</option>
+                        <option value="London">London</option>
+                        <option value="Los Angeles">Los Angeles</option>
+                        <option value="Paris">Paris</option>
+                        <option value="Portland">Portland</option>
+                        <option value="San Francisco">San Francisco</option>
+                        <option value="Seattle">Seattle</option>
+                        <option value="Sydney">Sydney</option>
+                        <option value="Zurich">Zurich</option>
+                        </select>
+                    </td>
+                    <td align="left">Return Date :</td>
+                    <td>
+                        <input name="returnDate" value="03/28/2018" size="10" maxlength="10" type="text">
+                    </td>
+                </tr>
+            <tr>
+                <td align="left">No. of Passengers : </td>
+                <td>
+                    <input name="numPassengers" value="1" size="3" maxlength="8" type="text"></td>
+                <td colspan="2">
+                    <label><input name="roundtrip" value="on" type="checkbox">Roundtrip ticket</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Seating Preference</td>
+                <td>Type of Seat</td>
+            </tr>
+            <tr>
+                <td>
+                    <label><input name="seatPref" value="Aisle" type="radio">Aisle</label><br>
+                    <label><input name="seatPref" value="Window" type="radio">Window</label><br>
+                    <label><input name="seatPref" value="None" checked="checked" type="radio">None</label><br>
+                </td>
+                <td>
+                    <label><input name="seatType" value="First" type="radio">First</label><br>
+                    <label><input name="seatType" value="Business" type="radio">Business</label><br>
+                    <label><input name="seatType" value="Coach" checked="checked" type="radio">Coach</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td height="10"></td>
+            </tr>
+            <tr>
+                <td colspan="4" align="center"><input name="findFlights" th:src="@{img/button_next.gif}" type="image" border="0"></td>
+            </tr>
+            </tbody>
+            </table>
+
+            <div>
+                <input name=".cgifields" value="roundtrip" type="hidden">
+                <input name=".cgifields" value="seatType" type="hidden">
+                <input name=".cgifields" value="seatPref" type="hidden">
+            </div>
+        </form>
+
+</div>
+</BODY>
+</HTML>

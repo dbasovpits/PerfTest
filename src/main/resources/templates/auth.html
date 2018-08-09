@@ -6,7 +6,7 @@
 </head>
 <body>
 <header>
-    <div th:insert="header :: header"></div>
+    <div th:insert="fragments/header.html :: header"></div>
 </header>
 <div id="container">
     <nav>
@@ -16,10 +16,10 @@
         <div th:if="${param.logout}">
             <h3>You have been logged out.</h3>
         </div>
-        <div style="margin-top: 30px" th:include="login :: login"></div>
+        <div style="margin-top: 30px" th:include="fragments/login.html :: login"></div>
     </nav>
     <main>
-        <div style="margin-top: 30px" th:include="welcome :: welcome"></div>
+        <div style="margin-top: 30px" th:include="fragments/welcome.html :: welcome"></div>
     </main>
 
 </div>

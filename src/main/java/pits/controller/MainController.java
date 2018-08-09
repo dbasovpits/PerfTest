@@ -1,4 +1,4 @@
-package pits;
+package pits.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,15 +12,15 @@ public class MainController {
         return "index";
     }
 
-    @RequestMapping("/home")
-    public String home(Model model) {
-        return "home";
-
-    }
-
     @RequestMapping("/auth")
     public String auth(Model model) {
         return "auth";
+
+    }
+
+    @RequestMapping("/flights")
+    public String flights(Model model) {
+        return "flights";
 
     }
 
